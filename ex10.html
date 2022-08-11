@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+
+    <script>
+      var workers = {
+        "programmer" : "Luke",
+        "designer" : "egoing"
+      };
+      document.write("programmer : " + workers.programmer + "<br>");
+      document.write("designer : " + workers.designer + "<br>");
+      workers.bookkeeper = "dudu";
+      document.write("bookkeeper : " + workers.bookkeeper + "<br>");
+      workers["data scientist"] = "tayo";
+      document.write("data scientist : " + workers["data scientist"] + "<br>");
+    </script>
+
+    <h2>Iterate</h2>
+    <script>
+      for(var key1 in workers) {
+        document.write(key1 + ' / ' + workers[key1] + "<br>");
+      }
+    </script>
+
+    <h2>Property & Method</h2>
+    <script>
+      workers.showAll = function() {
+        for(var key1 in this) {
+          document.write(key1 + ' / ' + this[key1] + "<br>");
+        }
+      }
+      workers.showAll();
+    </script>
+
+  </body>
+</html>
